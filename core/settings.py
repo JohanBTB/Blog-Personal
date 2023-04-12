@@ -46,7 +46,8 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-
+    'apps.blog',
+    'apps.category',
 ]
 
 THIRD_PARTY_APPS = [
@@ -61,15 +62,19 @@ INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'Custom',
-        'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline'],
-            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-            ['Link', 'Unlink'],
-            ['RemoveFormat', 'Source']
-        ],
-        'autoparagraph':False,
+    # 'default': {
+    #     'toolbar': 'Custom',
+    #     'toolbar_Custom': [
+    #         ['Bold', 'Italic', 'Underline'],
+    #         ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+    #         ['Link', 'Unlink'],
+    #         ['RemoveFormat', 'Source']
+    #     ],
+    #     'autoparagraph':False,
+    # }
+    'default':{
+        'toolbar':'full',
+        'autoParagraph':False
     }
 }
 
@@ -140,7 +145,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC-5'
+TIME_ZONE = 'America/Lima'
 
 USE_I18N = True
 
